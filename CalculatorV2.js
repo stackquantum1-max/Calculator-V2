@@ -49,3 +49,21 @@ allClearButton.addEventListener("click", () => {
   calculator.clear();
   calculator.updateDisplay();
 });
+
+  // Reset all values
+  clear() {
+    this.topDisplay = "";
+    this.bottomDisplay = "";
+    this.operation = undefined;
+  }
+
+  // Delete last entered number
+  delete() {
+    this.bottomDisplay = this.bottomDisplay.toString().slice(0, -1);
+  }
+
+  // Append number to current display
+  appendNumber(number) {
+    if (number === "." && this.bottomDisplay.includes(".")) return;
+    this.bottomDisplay = this.bottomDisplay.toString() + number.toString();
+  }
