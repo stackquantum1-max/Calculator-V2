@@ -16,3 +16,6 @@ class Calculator {
     this.clear();
   }
 }
+
+//  Instantiate Calculator
+const calculator = new Calculator(topDisplayTextElement, bottomDisplayTextElement);
